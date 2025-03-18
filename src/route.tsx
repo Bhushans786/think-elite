@@ -14,7 +14,7 @@ const Login = Loadable(lazy(() => import('./components/auth/login/Login')));
 const Otp = Loadable(lazy(() => import('./components/auth/otp/Otp')));
 
 //  * HOME PAGE
-const Home = Loadable(lazy(() => import('./components/pages/home/Home')));
+const Home = Loadable(lazy(() => import('./components/home/Home')));
 
 const routes: RouteObject[] = [
   {
