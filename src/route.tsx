@@ -10,11 +10,11 @@ const Loadable = (Component: FC) => (props: any) => {
 };
 
 // *  AUTHENTICATION PAGES
-const Login = Loadable(lazy(() => import('./components/auth/login/Login')));
-const Otp = Loadable(lazy(() => import('./components/auth/otp/Otp')));
+const Login = Loadable(lazy(() => import('./pages/auth/login/Login')));
+const Otp = Loadable(lazy(() => import('./pages/auth/otp/Otp')));
 
 //  * HOME PAGE
-const Home = Loadable(lazy(() => import('./components/home/Home')));
+const Home = Loadable(lazy(() => import('./pages/home/Home')));
 
 const routes: RouteObject[] = [
   {
