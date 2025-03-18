@@ -1,12 +1,13 @@
-import React, { Suspense, lazy } from 'react';
+import React, { FC, Suspense, lazy } from 'react';
 import type { RouteObject } from 'react-router';
 
-const Loadable = (Component: any) => (props: React.JSX.IntrinsicAttributes) =>
-  (
-    <Suspense>
+const Loadable = (Component: FC) => (props: any) => {
+  return (
+    <Suspense fallback={<p>Loading</p>}>
       <Component {...props} />
     </Suspense>
   );
+};
 
 // *  AUTHENTICATION PAGES
 const Login = Loadable(lazy(() => import('./components/auth/login/Login')));
@@ -25,7 +26,7 @@ const routes: RouteObject[] = [
     element: <Otp />,
   },
   {
-    path: 'home',
+    path: '/',
     element: <Home />,
   },
 ];
